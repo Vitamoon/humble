@@ -2,6 +2,8 @@ https://same-up81941tb8y-latest.netlify.app/
 
 Humble is a platform designed to break the “everything’s amazing” echo chamber in startup culture. In the VC environment, founders often get caught in self-reinforcing praise cycles where honest criticism gets lost under layers of optimism. This can inflate egos, obscure real risks, and prevent teams from iterating effectively. Humble flips that script—providing a space where founders, teammates, and advisors can share candid, constructive feedback without sugarcoating. We combine anonymity, structured critique prompts, and a culture-first approach to help teams identify blind spots, refine their vision, and build products grounded in reality.
 
-<img width="1920" height="1080" alt="2025-08-09-17-54-11_chrome_PvU3fF3u8M" src="https://github.com/user-attachments/assets/597aa5c9-e299-4675-8106-5fc7591cecf0" />
-<img width="1920" height="1080" alt="2025-08-09-17-54-01_chrome_ZGssNcOq1c" src="https://github.com/user-attachments/assets/2e9b5840-4e0f-4d10-a3b7-b81eabe8d12d" />
-<img width="1920" height="1080" alt="2025-08-09-17-53-34_chrome_Bgbuh9NTZT" src="https://github.com/user-attachments/assets/72fee1b1-e413-4a74-96ca-b93aca167a9b" />
+Made with Same.new and Vapi.
+
+<img width="1004" height="861" alt="a4" src="https://github.com/user-attachments/assets/58e0501f-b3fe-44ef-ae82-6e013a89f9d6" />
+<img width="1920" height="949" alt="a3" src="https://github.com/user-attachments/assets/ee620f5e-2c06-4fb5-a832-bc4af6043607" />
+<img width="1257" height="913" alt="a2" src="https://github.com/user-attachments/assets/f901a641-f41d-48d2-b73f-d27b9df08f16" />
