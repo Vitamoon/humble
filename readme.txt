@@ -1,0 +1,3 @@
+https://same-up81941tb8y-latest.netlify.app/
+
+Humble is a platform designed to break the “everything’s amazing” echo chamber in startup culture. In the VC environment, founders often get caught in self-reinforcing praise cycles where honest criticism gets lost under layers of optimism. This can inflate egos, obscure real risks, and prevent teams from iterating effectively. Humble flips that script—providing a space where founders, teammates, and advisors can share candid, constructive feedback without sugarcoating. We combine anonymity, structured critique prompts, and a culture-first approach to help teams identify blind spots, refine their vision, and build products grounded in reality.
