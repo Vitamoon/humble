@@ -21,28 +21,3 @@ Built on Same.new, powered by VAPI
 <img width="1257" height="913" alt="a2" src="https://github.com/user-attachments/assets/f901a641-f41d-48d2-b73f-d27b9df08f16" />
 <img width="1920" height="949" alt="a3" src="https://github.com/user-attachments/assets/ee620f5e-2c06-4fb5-a832-bc4af6043607" />
 <img width="1004" height="861" alt="a4" src="https://github.com/user-attachments/assets/58e0501f-b3fe-44ef-ae82-6e013a89f9d6" />
-
-## Getting Started  
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/humble.git
-
-cd humble
-
-# Install dependencies with bun
-bun install
-
-# Start the dev server
-bun dev
-```
----
-
-## Contributing  
-
-We welcome community contributions!  
-1. Fork the repo  
-2. Create a feature branch (`git checkout -b feature-name`)  
-3. Commit your changes (`git commit -m "Add feature"`)  
-4. Push to the branch (`git push origin feature-name`)  
-5. Open a pull request  
