@@ -18,17 +18,6 @@ Built on Same.new, powered by VAPI
 - **Custom Feedback Cycles** – Fit feedback into sprints, launches, or milestones.  
 - **Future Integrations** – Connect to Slack, Notion, and project management tools to track the feedback you've received!  
 
-
-- **Anonymous Feedback Channels** – Speak freely without fear of backlash.
-- 📝 **Structured Critique Prompts** – Get feedback that’s actionable and specific.  
-- 🔐 **Role-Based Access Control** – Manage permissions for founders, team members, and advisors.  
-- 📊 **Sentiment & Theme Analysis** – Spot recurring patterns in feedback.  
-- 🚨 **Risk Identification Dashboard** – Highlight blind spots before they become roadblocks.  
-- 📈 **Iteration Tracking** – Measure improvement over time.  
-- 🔒 **Private & Secure** – End-to-end encryption & anonymization.  
-- ⚙ **Custom Feedback Cycles** – Fit feedback into sprints, launches, or milestones.  
-- 🔗 **Future Integrations** – Connect to Slack, Notion, and project management tools to track the feedback you've received!  
-
 <img width="1257" height="913" alt="a2" src="https://github.com/user-attachments/assets/f901a641-f41d-48d2-b73f-d27b9df08f16" />
 <img width="1920" height="949" alt="a3" src="https://github.com/user-attachments/assets/ee620f5e-2c06-4fb5-a832-bc4af6043607" />
 <img width="1004" height="861" alt="a4" src="https://github.com/user-attachments/assets/58e0501f-b3fe-44ef-ae82-6e013a89f9d6" />
