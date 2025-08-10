@@ -1,4 +1,4 @@
-#Humble
+## Humble
 ### *Candid Feedback for Startups, Without the Sugarcoating*  
 
 Humble is a feedback platform that helps founders, teams, and advisors break the **“everything’s amazing” echo chamber** in startup culture.  
