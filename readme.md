@@ -4,7 +4,6 @@ Humble is a platform designed to break the “everything’s amazing” echo cha
 
 Made with Same.new and Vapi.
 
-
-<img width="1920" height="949" alt="a3" src="https://github.com/user-attachments/assets/ee620f5e-2c06-4fb5-a832-bc4af6043607" />
 <img width="1257" height="913" alt="a2" src="https://github.com/user-attachments/assets/f901a641-f41d-48d2-b73f-d27b9df08f16" />
+<img width="1920" height="949" alt="a3" src="https://github.com/user-attachments/assets/ee620f5e-2c06-4fb5-a832-bc4af6043607" />
 <img width="1004" height="861" alt="a4" src="https://github.com/user-attachments/assets/58e0501f-b3fe-44ef-ae82-6e013a89f9d6" />
