@@ -1,4 +1,4 @@
-# ![Humble Logo](docs/logo.png)  
+#Humble
 ### *Candid Feedback for Startups, Without the Sugarcoating*  
 
 Humble is a feedback platform that helps founders, teams, and advisors break the **“everything’s amazing” echo chamber** in startup culture.  
@@ -47,17 +47,6 @@ bun install
 # Start the dev server
 bun dev
 ```
-
----
-
-## 📸 Screenshots *(Optional)*  
-
-> Add your screenshots here for features like the dashboard, feedback form, and analysis tools.  
-
-| Dashboard | Feedback Flow |
-|-----------|---------------|
-| ![Dashboard Screenshot](docs/dashboard.png) | ![Feedback Screenshot](docs/feedback.png) |
-
 ---
 
 ## 🤝 Contributing  
@@ -74,9 +63,3 @@ We welcome community contributions!
 ## 📜 License  
 
 Licensed under the [MIT License](LICENSE).  
-
----
-
-## ❤️ Acknowledgements  
-
-Built for founders who want *truth over comfort*.  
