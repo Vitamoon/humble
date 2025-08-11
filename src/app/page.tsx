@@ -61,6 +61,10 @@ export default function Home() {
   const scopeCanvasRef = useRef<HTMLCanvasElement | null>(null);
   const lastVapiMetaSentRef = useRef<number>(0);
 
+  // Add session-level refs for reply variability
+  const replyIndexRef = useRef<number>(0);
+  const shuffledIndicesRef = useRef<number[] | null>(null);
+
   const vapiEnabled = process.env.NEXT_PUBLIC_VAPI_ENABLED === "true";
 
   // Debounce management for STT finalization
@@ -68,6 +72,25 @@ export default function Home() {
   const partialBufferRef = useRef<string>("");
   const lastPartialAtRef = useRef<number>(0);
   const DEBOUNCE_MS = 3000; // as requested
+
+  // For throttled UI updates
+  const latestSignalsRef = useRef<typeof signals>(null);
+  const latestFocusRef = useRef<typeof focusScore>(null);
+
+  useEffect(() => {
+    latestSignalsRef.current = signals;
+  }, [signals]);
+  useEffect(() => {
+    latestFocusRef.current = focusScore;
+  }, [focusScore]);
+  // Throttle UI updates interval from 300 to 200ms
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      if (latestSignalsRef.current) setSignals(latestSignalsRef.current);
+      if (latestFocusRef.current !== null) setFocusScore(latestFocusRef.current);
+    }, 200);
+    return () => window.clearInterval(id);
+  }, []);
 
   const clearIdleTimer = () => {
     if (idleTimerRef.current) {
@@ -258,9 +281,9 @@ export default function Home() {
           distraction: sm.distraction > 50,
         };
 
-        setSignals(smoothedSignals);
+        latestSignalsRef.current = smoothedSignals;
         const score = computeFocusScore(smoothedSignals);
-        setFocusScore(Math.round(score));
+        latestFocusRef.current = Math.round(score);
         pushVapiVision(smoothedSignals);
 
       }
@@ -507,6 +530,7 @@ export default function Home() {
     } catch {}
   };
 
+  // Improved harshCoachResponse with session shuffle and rolling counter
   const harshCoachResponse = (input: string, harsh: number, nicePaid: boolean) => {
     const trimmed = input.trim();
     if (!trimmed) return "I can't critique silence. State your goal, your deadline, and what you shipped since last check-in.";
@@ -521,16 +545,38 @@ export default function Home() {
       "Metrics over vibes. What is success by Friday in a single number?",
       "Your excuse is a choice. What is the smallest thing you can ship in 3 hours?",
       "If it's not on the calendar, it's not happening. Schedule it now.",
+      "You’re spreading effort thin. Pick the one bet that moves retention.",
+      "Prototypes beat discussions. Put a clickable flow in front of users.",
+      "You’re avoiding the hard call. Escalate the decision to now, not later.",
+      "If it doesn’t reduce time-to-value, it’s fluff. Trim it.",
     ];
     const niceLines = [
       "Good direction. Let's make it concrete: what single outcome by Friday?",
       "Scope it to one artifact. What's the smallest version to validate?",
       "Talk to two users today and extract one actionable change.",
       "Cut one feature to improve quality elsewhere.",
+      "Great start—tighten the goal into a measurable Friday win.",
+      "Focus the effort: one hypothesis, one test, one metric.",
     ];
-    const pool = (nicePaid ? niceLines : harshLines).slice(0, Math.max(3, Math.min(10, harsh)));
-    const idx = Math.floor((trimmed.length + harsh) % pool.length);
-    return `You said: "${trimmed}". ${pool[idx]}`;
+    const basePool = nicePaid ? niceLines : harshLines;
+    const visiblePool = basePool.slice(0, Math.max(3, Math.min(10, harsh)));
+    // Prepare a session shuffle the first time or when size changes
+    if (!shuffledIndicesRef.current || shuffledIndicesRef.current.length !== visiblePool.length) {
+      const indices = [...Array(visiblePool.length).keys()];
+      for (let i = indices.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+      }
+      shuffledIndicesRef.current = indices;
+      replyIndexRef.current = 0;
+    }
+    // Combine content, time, and rolling index to vary selection
+    replyIndexRef.current = (replyIndexRef.current + 1) % shuffledIndicesRef.current.length;
+    const timeSalt = Math.floor(Date.now() / 1000) % shuffledIndicesRef.current.length;
+    const contentSalt = (trimmed.length + harsh) % shuffledIndicesRef.current.length;
+    const pick = (replyIndexRef.current + timeSalt + contentSalt) % shuffledIndicesRef.current.length;
+    const idx = shuffledIndicesRef.current[pick] ?? 0;
+    return `You said: "${trimmed}". ${visiblePool[idx]}`;
   };
 
   const pushVapiVision = (sig: { presence: number; attention: number; distraction: boolean } | null) => {
