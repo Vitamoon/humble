@@ -17,7 +17,7 @@ Built on Same.new, powered by VAPI
 - **Private & Secure** – End-to-end encryption.  
 - **Custom Feedback Cycles** – Fit feedback into sprints, launches, or milestones.  
 - **Future Integrations** – Connect to Slack, Notion, and project management tools to track the feedback you've received!
-- **Bonus** – Upgrade to add nice, positive responses to make your day!
+- **Bonus** – Upgrade to add glazing / positive responses to make your day!
 
 <img width="1257" height="913" alt="a2" src="https://github.com/user-attachments/assets/f901a641-f41d-48d2-b73f-d27b9df08f16" />
 <img width="1018" height="750" alt="image" src="https://github.com/user-attachments/assets/d983dcab-0f9b-4f9f-a400-f9b389adb09a" />
